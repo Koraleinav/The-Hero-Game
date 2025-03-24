@@ -1,0 +1,43 @@
+Create a game where there is a brave heroine who needs to defeat monsters. To do this – she must go to war against the existing monsters, with each time one monster is defeated a new random monster arrives.
+The game will contain the following classes:
+a. Hero – a class that represents our heroine. It will contain:
+    i. Properties:
+        .1 Hero’s name
+        .2 HP – the amount of life our heroine has
+        .3 Damage – the amount of damage our heroine can deal
+        .4 Level – the level of our heroine
+        .5 Coins – the amount of coins our heroine has collected
+    ii. Functions:
+        .1 Constructor – create a constructor with one parameter (heroine name), which will initialize the heroine to the following data: Level: 1, Damage: 2, Life: 10, Coins: 0.
+        .2 Heal – This function will restore N percent of her life to our heroine (set as a constant of the class).
+        .3 up_level – Increase the level of our heroine. With each level increase – the damage our heroine can deal and her health will increase by M percent (set as a class constant). It will only be possible to level up if our heroine has enough coins for this (K times the level we want to reach, set as a class constant). Leveling up will also restore our heroine’s health points.
+        .4 attack – Attack a monster. You will receive a monster as a parameter and reduce its health by the amount of our heroine’s Damage (using the ReduceHealth function of the monster). If the monster dies (its health is zero), our heroine will receive coins according to her level.
+        .5 defend – Defend against the next monster attack. Reduce the amount of damage the heroine will receive by 80 percent in the next attack.
+        .6 health_reduce – The function will receive a monster as a parameter and will reduce our hero’s life according to the damage of that monster and whether our hero defends herself or not (if the defend action was performed in the previous line). The function will return the life remaining for the hero after the monster’s attack. (Note: If the damage is greater than the life, the life points must be reset so that the hero does not have negative life).
+        .7 coins_increase – The function will receive an amount of coins as a parameter, the amount of coins will be added to the total coins in the hero’s possession
+
+b. Monster – A class representing a monster. It will contain:
+    i. Properties:
+        .1 Monster name
+        .2 HP – The amount of life of the monster
+        .3 Damage – The amount of damage the monster can deal
+        .4 Level – The level of our monster
+    ii. Functions:
+        .1 Constructor – will receive as a parameter the name of the monster, and the current level of the hero. The level of the monster will be -+ one level from our hero (i.e.
+        if the hero is level 5 then the monster can be level 4,5 or 6 randomly). The life and damage assigned to the monster will be proportional to the level of that monster (choose a proportion constant that you think is appropriate. The proportion constant should be set as a constant variable of the class).
+        .2 attack – attack our hero. Will receive as a parameter a hero and reduce his life according to the amount of damage of our monster (using the function ReduceHealth of the hero).
+        .3 health_reduce – the function will receive as a parameter a hero and reduce the life of the monster according to its damage. The function will return the life remaining for the monster. After the heroine's attack (note: if the damage is greater than the life, the life points should be reset so that there is no situation where the monster has negative life).
+        .4 action_choose – a function that will occur every turn. It will receive as input from the player what action she wants to perform (attack / level up / revive / defend). Each turn, our player will receive one coin.
+
+The course of the game will be:
+A. Creating our heroine and creating the first monster that the heroine will fight
+B. Entering the turn loop. Each turn:
+    a. Calling the action_choose function (where she can choose whether she wants to defend /attack / revive / or level up in the current turn) .
+    b. If the monster has no life left - a new monster must be created.
+    c. The monster's turn – our heroine's attack.
+    d. If our heroine has no lives left – we should exit the loop and print that she
+    lost the game.
+
+C. The end of the game comes when the player has no more lives left.
+
+There should be a complete separation between user interaction/graphics and the logic of the game.
