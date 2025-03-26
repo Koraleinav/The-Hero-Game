@@ -77,6 +77,11 @@ The-Hero-Game/
 ├── colors.py
 └── README.md
 
+## ✍️ Author
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey?style=for-the-badge&logo=github)](https://github.com/Koraleinav)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/koral-einav/)
+
 
 ## 📝 Notes 📝
 
